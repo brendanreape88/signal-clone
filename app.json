@@ -1,10 +1,12 @@
 {
   "expo": {
-    "name": "signal-clone-2",
+    "name": "Signal Clone",
     "slug": "signal-clone-2",
+    "description": "Signal clone app that utilizes Google Firebase for user authentication, chat room creation, and real-time messaging.",
     "version": "1.0.0",
     "orientation": "portrait",
-    "icon": "./assets/icon.png",
+    "icon": "./assets/signal-icon.png",
+    "privacy": "public",
     "splash": {
       "image": "./assets/splash.png",
       "resizeMode": "contain",
@@ -13,9 +15,7 @@
     "updates": {
       "fallbackToCacheTimeout": 0
     },
-    "assetBundlePatterns": [
-      "**/*"
-    ],
+    "assetBundlePatterns": ["**/*"],
     "ios": {
       "supportsTablet": true
     },
@@ -26,7 +26,12 @@
       }
     },
     "web": {
-      "favicon": "./assets/favicon.png"
+      "favicon": "./assets/favicon.png",
+      "build": {
+        "babel": {
+          "include": ["@codler/react-native-keyboard-aware-scroll-view"]
+        }
+      }
     }
   }
 }
